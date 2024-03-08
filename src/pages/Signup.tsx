@@ -9,12 +9,14 @@ import { signupSchema } from "@saurabh412/index";
 
 function Signup() {
     const [formData, setFormData] = useState<signupSchema>({
-        name: '', email: '', password: ''
+        name: "",
+        email: "",
+        password: ""
     })
     const [errors, setErrors] = useState<Record<string, string>>({})
     let navigate = useNavigate()
     function handleChange(e: any) {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        setFormData({...formData,[e.target.name]: e.target.value})
     }
     async function submitHandler(e: any) {
         e.preventDefault();
@@ -56,7 +58,7 @@ function Signup() {
 
                 <div className="mb-4">
                     <label className="block text-gray-700 font-bold mb-2">Password:</label>
-                    <input type="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
+                    <input type="password" name="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
                 </div>
 
                 <div className="mt-4 mb-6">

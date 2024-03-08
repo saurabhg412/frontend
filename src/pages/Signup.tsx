@@ -63,7 +63,7 @@ function Signup() {
                     <button className="bg-blue-500 hover:bg-indigo-700 text-white font-bold py-2 px-10 rounded-md focus:outline-none focus:shadow-outline" onClick={submitHandler}>Signup</button>
                 </div>
             </div>
-            <div className="text-xl h-screen bg-slate-200 flex flex-col items-center justify-center font-serif p-20 col-span-5 ">
+            <div className="text-xl h-screen bg-slate-200 flex flex-col items-center justify-center font-serif p-20 col-span-5">
                 <Quote></Quote>
             </div>
         </div>

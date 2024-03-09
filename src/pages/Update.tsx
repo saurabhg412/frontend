@@ -2,11 +2,16 @@ import { useState } from "react";
 import AppBar from "../components/Appbar";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
+import { Post } from "./Post";
 
 export function UpdatedUser(){
     const {id} = useParams();
-    const [updatedTitle, setUpdatedTitle] = useState('');
-    const [updatedContent, setUpdatedContent] = useState('');
+    // @ts-ignore
+    const [updatedTitle, setUpdatedTitle] = useState(Post.title);
+    //@ts-ignore
+    const [updatedContent, setUpdatedContent] = useState(Post.content);
+    console.log(updatedTitle);
+    console.log(updatedContent);
     const navigate = useNavigate();
     return (
         <div>

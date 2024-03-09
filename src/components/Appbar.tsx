@@ -1,10 +1,9 @@
 
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import usePost from './useposts-hook';
 
 export default function AppBar() {
   // const { username }:any = usePost();
-  const location = useLocation();
   // const user = username[0].author.name
   // console.log(user)
   return (
@@ -15,13 +14,13 @@ export default function AppBar() {
 
         {/* Navigation Links */}
         <ul className="flex items-center space-x-4">
-          <li>
-            <input type="text" placeholder='Search your posts...' className="border border-gray-300 rounded-md px-3 py-2 w-full"/>
+          <li className='ml-4 mr-6 pr-4 text-left'>
+            <input type="text" placeholder='Search your posts...' className="border border-gray-300 rounded-md px-28 py-2 w-full text-left md:block hidden"/>
           </li>
           <li >
             <Link to="/post">Home</Link>
           </li>
-          <li className={location.pathname.startsWith('/post/') ? 'text-blue-500' : ''}>
+          <li>
             <Link to="/publish">New Post</Link>
           </li>
           <li>
@@ -31,12 +30,15 @@ export default function AppBar() {
 
           {/* User Profile (optional) */}
           <li>
-            <button className="bg-gray-200 hover:bg-blue-200 px-3 py-1 rounded-md">
-              {/* Replace with profile image or initials */}
-              <div className="flex items-center"> 
-                <span className="font-medium mr-2 ">Hello </span>
-                {/* <span className="text-lg font-bold">{user}</span>  */}
-              </div>
+            <button className="bg-gray-200 hover:bg-blue-400 px-3 py-1 rounded-md">
+                <span className="font-medium mr-2 "><Link to="/profile">Profile</Link></span>
+            </button>
+          </li>
+          <li>
+            <button className="bg-red-500 hover:bg-red-600 px-2 py-1 rounded-md" onClick={function(){
+              alert('Logout Successfull !')
+            }}>
+              <Link to="/signin">Logout</Link>
             </button>
           </li>
         </ul>

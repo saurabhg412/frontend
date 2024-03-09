@@ -6,6 +6,7 @@ import Publish from "./pages/publish"
 import Posts from "./pages/Posts"
 import Postid from "./pages/Postid"
 import Signup from "./pages/Signup"
+import Profile from "./pages/Profile"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/post/:id" element={<Postid/>}></Route>
         <Route path="/publish" element={<Publish/>}></Route>
         <Route path="/update/:id" element={<UpdatedUser/>}></Route>
+        <Route path="/profile" element={<Profile/>}></Route>
       </Routes>
     </BrowserRouter>
   )

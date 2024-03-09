@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function usePostid({id}:any){
+export function usePostid({id}:any){
     const [loading,setLoading] = useState(true)
     const [posts,setPosts] = useState('');
 
@@ -19,6 +19,7 @@ export default function usePostid({id}:any){
             setLoading(false);
             });
     },[id])
+ 
     return(
         { posts, loading}
      )

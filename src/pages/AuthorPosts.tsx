@@ -1,10 +1,11 @@
-
-import usePosts from "../hooks/usepost-hook";
+import { useParams } from "react-router-dom";
 import AppBar from "../components/Appbar";
+import { useAuthorPosts } from "../hooks/useAuthorposts-hook";
 import { Link } from "react-router-dom";
 
-export function AllPosts() {
-    const { posts, loading }: { posts: any[], loading: boolean } = usePosts();
+export function AuthorPosts(){
+    const {id} = useParams();
+    const { posts, loading }: { posts: any[], loading: boolean } = useAuthorPosts({id});
 
     if (loading) {
         return (
@@ -12,7 +13,6 @@ export function AllPosts() {
                 <p className="text-center">Loading...</p>
             </div>);
     }
-
     return (
         <div>
             <div className="mb-2">
@@ -21,7 +21,7 @@ export function AllPosts() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-4">
                     {posts.map(function (post: any) {
                         return (
-                            <Link key={post.id} to={`/author/${post.author.id}`}>
+                            <Link key={post.id} to={`/posts/${post.id}`}>
                             <div className="bg-white border border-gray-200 rounded-lg p-4 shadow-md hover:shadow-lg overflow-hidden" key={post.id}>
                                 <div className="flex justify-start items-center">
                                     <span className="text-gray-500 text-md mr-2">{post.id}<span className="font-bold text-black">.</span></span>

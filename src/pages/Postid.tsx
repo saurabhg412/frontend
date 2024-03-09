@@ -1,9 +1,9 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import AppBar from "../components/Appbar";
-import usePostid from "../hooks/postid-hook";
+import {usePostid} from "../hooks/postid-hook";
 import axios from "axios";
 
-export default function Postid() {
+export function Postid() {
     const navigate = useNavigate()
     const { id } = useParams();
     const { posts, loading }: { posts: any, loading: boolean } = usePostid({ id });

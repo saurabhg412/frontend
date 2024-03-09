@@ -42,34 +42,33 @@ function Signup() {
     }
 
     return (
-        <div >
-        <div className="grid grid-cols-12 h-screen bg-slate-100 box-content">
+        <div>
+        <div className="grid grid-cols-12 h-screen bg-gray-100 box-content">
             <div className="h-screen w-full flex items-center justify-center col-span-12 md:col-span-7 flex-col rounded-lg shadow-lg border p-6 ">
-                <div className="form-container">
+                <div className="bg-white rounded-lg shadow-lg p-6">
                 <Heading ></Heading>
-                <div className="mb-4">
+                <div>
                     <label className="block text-gray-700 font-bold mb-2">Name:</label>
-                    <input name="name" type="text" className="form input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
+                    <input name="name" type="text" className="form-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
                 </div>
 
-                <div className="mb-4">
+                <div>
                     <label className="block text-gray-700 font-bold mb-2">Email:</label>
-                    <input name="email" type="email" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
+                    <input name="email" type="email" className="form-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
                 </div>
-                
 
-                <div className="mb-4">
+                <div>
                     <label className="block text-gray-700 font-bold mb-2">Password:</label>
-                    <input type="password" name="password" className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
+                    <input type="password" name="password" className="form-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" onChange={handleChange} required/>
                 </div>
 
-                <div className="mt-6 mb-4 ml-24">
-                    <button className="bg-blue-500 hover:bg-indigo-700 text-white font-bold py-2 px-8 rounded-md focus:outline-none focus:shadow-outline" onClick={submitHandler}>Signup</button>
+                <div className="mt-4">
+                    <button className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-1 rounded-full w-full" onClick={submitHandler}>Signup</button>
                 </div>
                 </div>
             </div>
             <div className="md:block hidden col-span-5">
-                <div className="text-xl h-screen flex flex-col items-center justify-center font-serif p-20 bg-red-300">
+                <div className="text-xl h-screen flex flex-col items-center justify-center font-serif p-20 bg-slate-200">
                     <Quote></Quote>
                 </div>
             </div>

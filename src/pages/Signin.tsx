@@ -37,19 +37,19 @@ function Signin() {
                 Medium
             </div>
             <div className="h-screen w-full flex items-center justify-center">
-                <div className="bg-white rounded-lg shadow-lg p-6">
+                <div className="bg-white rounded-lg shadow-lg p-6 m-14">
                     <div>
                         <Headings></Headings>
                     </div>
                     <div>
-                        <input type="email" name="email" placeholder="Email" className="shadow appearance-none border rounded w-full py-2 px-1 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-6" onChange={handleChange} />
-                        <input type="password" placeholder="Password" name="password" className="shadow appearance-none border rounded w-full py-2 px-1 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4" onChange={handleChange} />
-                        <div className="flex mt-4 text-sm text-cyan-600">
+                        <input type="email" name="email" placeholder="Email" className="form-input shadow appearance-none border rounded w-full py-2 px-1 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-6" onChange={handleChange} />
+                        <input type="password" placeholder="Password" name="password" className="form-input shadow appearance-none border rounded w-full py-2 px-1 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 mt-4" onChange={handleChange} />
+                        <div className="flex mt-1 text-sm text-cyan-600">
                             <Link to="/update" className="hover:text-cyan-500 transition ease-out duration-100">Forgot password?</Link>
                         </div>
                         <button type="submit" className="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-1 rounded-full w-full" onClick={handleSubmit}>Login</button>
 
-                        <div className="flex items-center justify-center mt-8">
+                        <div className="flex items-center justify-center mt-6">
                             <hr className="flex-1 border-gray-300" />
                             <span className="bg-white px-4 text-gray-500">OR</span>
                             <hr className="flex-1 border-gray-300" />

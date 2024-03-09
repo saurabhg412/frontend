@@ -2,7 +2,7 @@ import AppBar from "../components/Appbar";
 import usePost from "../hooks/useposts-hook";
 import { Link } from "react-router-dom";
 
-export default function Posts(){
+export function UserPosts(){
     const {loading,posts}:{loading:boolean,posts:any[]} = usePost();
     if (loading) {
         return (
@@ -24,8 +24,8 @@ export default function Posts(){
                         <span className="text-gray-500 text-md mr-2">{post.id}<span className="font-bold text-black">.</span></span>
                         <h3 className="font-bold text-lg mb-0">Author : {post.author.name}</h3>
                     </div>
-                        <h2 className="text-xl font-medium mb-3">title : {post.title}</h2>
-                        <p className="text-gray-700">content : {post.content}</p>
+                        <h2 className="text-xl font-medium mb-3 line-clamp-1">title : {post.title}</h2>
+                        <p className="text-gray-700 line-clamp-1">content : {post.content}</p>
                     </div>
                     </Link>
             )})}

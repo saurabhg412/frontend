@@ -3,7 +3,7 @@ import AppBar from "../components/Appbar";
 import usePostid from "../hooks/postid-hook";
 import axios from "axios";
 
-export default function () {
+export default function Postid() {
     const navigate = useNavigate()
     const { id } = useParams();
     const { posts, loading }: { posts: any, loading: boolean } = usePostid({ id });
@@ -24,12 +24,12 @@ export default function () {
     };
 
     return (
-        <div className="container mx-auto p-6">
+        <div className="container mx-auto">
             <div className="mb-4">
                 <AppBar />
             </div>
 
-            <div className="border border-gray-200 rounded-lg p-6 shadow-md"> {/* Added shadow */}
+            <div className="border border-gray-200 rounded-lg p-6 shadow-md m-10"> {/* Added shadow */}
                 <div className="flex items-center justify-between mb-4"> {/* For title and button layout */}
                     <h1 className="font-bold text-3xl border-l-4 border-gray-500 pl-4">
                         Title : {posts.title}

@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* General form container and input styling */
+.form-container {
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  padding: 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+}
+
+.form-input {
+  width: 100%;      /* Full width of the container */
+  padding: 12px 16px; /* Increased padding */
+  margin-bottom: 16px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  font-size: 1rem;    /* Adjust the font size */
+}

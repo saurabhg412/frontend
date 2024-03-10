@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 export function useAuthorPosts({id}:any){
     const [loading,setLoading] = useState(true)
     const [posts,setPosts] = useState([]);
-    const [post,setPost] = useState('')
+    const [post,setPost] = useState(null);
+    const[error,setError] = useState(null)
 
     useEffect(function(){
         axios.get(`https://backend.saurabhgupta0122.workers.dev/api/v1/post/author/${id}`,{
@@ -32,10 +33,11 @@ export function useAuthorPosts({id}:any){
         .catch((error) => {
             console.error("Error fetching posts:", error); 
             // Optionally: Set an error state to display feedback to the user
+            setError(error.message || 'Something went wrong'); // Set an error message
             setLoading(false);
             });
     },[id])
     return(
-        { posts, loading,post}
+        { posts, loading,post,error}
      )
 } 

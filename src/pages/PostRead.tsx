@@ -4,8 +4,16 @@ import { useAuthorPosts } from "../hooks/useAuthorposts-hook";
 
 export function PostRead(){
     const {id} = useParams();
-    const {post,loading}:{ post: any, loading: boolean } =useAuthorPosts({id})
-    if(loading) return <div>Loading...</div>;
+    const {post,loading,error}:{ post: any, loading: boolean,error:any } =useAuthorPosts({id})
+
+    if (loading) {
+        return (
+            <div className="container mx-auto p-6">
+                <p className="text-center">Loading...</p>
+            </div>);
+    } else if (error){
+            return <div className="error-message">Error: {error}</div>;
+    } else if (post){
     return (
         <div className="container mx-auto">
             <div className="mb-4">
@@ -19,10 +27,14 @@ export function PostRead(){
                     </h1>
                 </div>
 
-                <span className="text-lg text-gray-600 block mb-4">{post.author.name}</span>
+                <p className="text-lg text-gray-600 block mb-4">{post.author.name}</p>
                 <p className="text-base">{post.content}</p>
 
             </div>
         </div>
     );
+    }
+    else{
+        return <div>No post found.</div>;
+    }
 }

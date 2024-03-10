@@ -1,11 +1,16 @@
-
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import usePost from './useposts-hook';
 
 export default function AppBar() {
+  const navigate = useNavigate();
   // const { username }:any = usePost();
   // const user = username[0].author.name
   // console.log(user)
+  async function handleLogout() {
+    localStorage.removeItem('token');
+    navigate('/signin')
+  };
+
   return (
     <div className="bg-white shadow-md sticky top-0 z-10"> 
       <div className="container mx-auto px-4 flex items-center justify-between py-3">
@@ -35,10 +40,7 @@ export default function AppBar() {
             </button>
           </li>
           <li>
-            <button className="bg-red-500 hover:bg-red-600 px-2 py-1 rounded-md" onClick={function(){
-              alert('Logout Successfull !')
-            }}>
-              <Link to="/signin">Logout</Link>
+            <button className="bg-red-500 hover:bg-red-600 px-2 py-1 rounded-md" onClick={handleLogout}>Logout
             </button>
           </li>
         </ul>

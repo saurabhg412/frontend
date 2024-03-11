@@ -38,25 +38,50 @@ export function Publish() {
         }
     }
 
-    return (
-        <div>
-            <AppBar></AppBar>
-            <div className="container mx-auto p-8 bg-slate-200 h-screen">
-                <div className="text-3xl font-bold mb-4">
-                    <h1>Publish a new blog   post</h1>
-                </div>
-                <div className="mb-4">
-                    <label className="block text-gray-700 text-sm font-bold mb-2">Title: </label>
-                    <input type='text' name="title" onChange={changeHandler} className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" /><br />
-                </div>
-                <div className="mb-6">
-                    <label className="block text-gray-700 text-sm font-bold mb-2">Content: </label><br />
-                    <textarea name="content" onChange={changeHandler} className="w-full border border-gray-300 rounded-md px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea><br />
-                </div>
-
-                <button onClick={submitHandler} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md focus:outline-none focus:shadow-outline">Publish</button>
-            </div>
+return (
+    <div className="bg-gradient-to-r from-blue-400 to-green-300">
+        <div className="sticky top-0 z-10 bg-white border-b border-gray-200">
+            <AppBar />
         </div>
 
-    )
+        <div className="container mx-auto p-8  h-screen">
+            <div className="max-w-lg mx-auto p-6 bg-gradient-to-r from-green-500 to-blue-300 rounded-lg shadow-md">
+                <h1 className="text-4xl font-bold mb-6">Publish A New Blog Post</h1>
+
+                <form onSubmit={submitHandler}> 
+                    <div className="mb-4">
+                        <label htmlFor="title" className="block text-gray-700 text-lg font-bold mb-2">Title:</label>
+                        <input 
+                            type="text"
+                            placeholder="Title..."
+                            id="title" 
+                            name="title" 
+                            onChange={changeHandler} 
+                            className="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" 
+                        />
+                    </div>
+
+                    <div className="mb-6">
+                        <label htmlFor="content" className="block text-gray-700 text-lg font-bold mb-2">Content:</label>
+                        <textarea 
+                            id="content"
+                            placeholder="Publish Your Content Here . . ."
+                            name="content" 
+                            onChange={changeHandler} 
+                            className="w-full border border-gray-300 rounded-md px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-blue-400 h-48"
+                        ></textarea> 
+                    </div>
+
+                    <button 
+                        type="submit"
+                        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-md focus:outline-none focus:shadow-outline"
+                    >
+                        Publish
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+);
+
 }

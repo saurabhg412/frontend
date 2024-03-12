@@ -33,8 +33,8 @@ function Signin() {
     }
 
 return (
-    <div className="bg-gradient-to-r from-blue-500 to-green-300 h-screen flex items-center justify-center">
-        <div className="bg-blue-200 rounded-lg shadow-lg p-10 max-w-sm">
+    <div className="bg-gradient-to-r from-blue-400 via-red-300 to-green-300 h-screen flex items-center justify-center">
+        <div className="bg-gradient-to-r from-green-300 to-blue-300 rounded-lg shadow-lg p-10 max-w-sm">
             {/* Headings Component */} 
             <Headings></Headings>
 
@@ -43,7 +43,6 @@ return (
                     {/* <label htmlFor="email" className="block text-gray-700 mb-1">Email</label> */}
                     <input 
                         type="email" 
-                        id="email" 
                         name="email" 
                         placeholder="Email" 
                         className="form-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" 
@@ -53,9 +52,8 @@ return (
                 <div className="mb-4"> 
                     {/* <label htmlFor="email" className="block text-gray-700 mb-1">Email</label> */}
                     <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
+                        type="password"  
+                        name="password" 
                         placeholder="Password" 
                         className="form-input shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500" 
                         onChange={handleChange} 
@@ -63,8 +61,8 @@ return (
                 </div>
 
                 {/* Forgot Password Link*/}
-                <div className="flex justify-end mt-2 text-sm text-cyan-600">
-                    <Link to="/update" className="hover:text-cyan-500 transition ease-out duration-100">Forgot password?</Link>
+                <div className="flex justify-start mt-2 text-sm text-cyan-600 font-semi-bold">
+                    <Link to="/update" className="hover:text-red-500 transition ease-out duration-100">Forgot password?</Link>
                 </div>
 
                 {/* Login Button */}
@@ -78,7 +76,7 @@ return (
                 {/* OR Divider */}
                 <div className="flex items-center justify-center mt-8">
                     <hr className="flex-1 border-gray-600" />
-                    <span className="bg-white px-4 text-gray-500">OR</span>
+                    <span className="px-4 text-gray-900">OR</span>
                     <hr className="flex-1 border-gray-600" />
                 </div>
 

@@ -39,13 +39,13 @@ export function Publish() {
     }
 
 return (
-    <div className="bg-gradient-to-r from-blue-400 to-green-300">
+    <div className="bg-gradient-to-r from-green-300 via-red-300 to-blue-400">
         <div className="sticky top-0 z-10 bg-white border-b border-gray-200">
             <AppBar />
         </div>
 
-        <div className="container mx-auto p-8  h-screen">
-            <div className="max-w-lg mx-auto p-6 bg-gradient-to-r from-green-500 to-blue-300 rounded-lg shadow-md">
+        <div className="container mx-auto p-8 h-screen">
+            <div className="max-w-lg mx-auto p-6 bg-gradient-to-r from-blue-400 to-green-300 rounded-lg shadow-md">
                 <h1 className="text-4xl font-bold mb-6">Publish A New Blog Post</h1>
 
                 <form onSubmit={submitHandler}> 

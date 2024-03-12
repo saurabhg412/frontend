@@ -1,4 +1,5 @@
-
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 import usePosts from "../hooks/usepost-hook";
 import AppBar from "../components/Appbar";
 import { Link } from "react-router-dom";
@@ -8,9 +9,72 @@ export function AllPosts() {
 
     if (loading) {
         return (
-            <div className="container mx-auto p-6">
-                <p className="text-center">Loading...</p>
-            </div>);
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-4">
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+            </div>
+            )
     }
 
     return (

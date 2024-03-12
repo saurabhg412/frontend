@@ -43,22 +43,22 @@ function Signup() {
 
     return (
         <div className="grid grid-cols-12 h-screen box-content">
-      <div className="h-screen w-full flex items-center justify-center col-span-12 md:col-span-8 flex-col rounded-lg shadow-lg border p-6 bg-gradient-to-r from-blue-500 to-green-300">
-        <div className="p-6 rounded-lg shadow-lg bg-gray-200 border">
+      <div className="h-screen w-full flex items-center justify-center col-span-12 md:col-span-8 flex-col rounded-lg bg-gradient-to-r from-blue-400 via-red-400 to-green-300">
+        <div className="p-6 rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] bg-gradient-to-r from-green-300 to-blue-400">
           <Heading ></Heading>
           <div className="mb-6">
             <label className="block text-gray-700 font-bold mb-2">Name:</label>
-            <input name="name" type="text" className="w-full px-3 py-2 placeholder-gray-500 border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 shadow-sm" onChange={handleChange} required/>
+            <input name="name" type="text" placeholder="John" className="w-full px-3 py-2 placeholder-gray-500 border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 shadow-sm" onChange={handleChange} required/>
           </div>
 
           <div className="mb-6">
             <label className="block text-gray-700 font-bold mb-2">Email:</label>
-            <input name="email" type="email" className="w-full px-3 py-2 placeholder-gray-500 border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 shadow-sm" onChange={handleChange} required/>
+            <input name="email" type="email" placeholder="John@gmail.com" className="w-full px-3 py-2 placeholder-gray-500 border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 shadow-sm" onChange={handleChange} required/>
           </div>
 
           <div className="mb-6">
             <label className="block text-gray-700 font-bold mb-2">Password:</label>
-            <input type="password" name="password" className="w-full px-3 py-2 placeholder-gray-500 border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 shadow-sm" onChange={handleChange} required/>
+            <input type="password" name="password" placeholder="******" className="w-full px-3 py-2 placeholder-gray-500 border rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 shadow-sm" onChange={handleChange} required/>
           </div>
 
           <div className="mt-4">
@@ -67,7 +67,7 @@ function Signup() {
         </div>
       </div>
       <div className="md:block hidden col-span-4">
-        <div className="text-xl h-screen flex flex-col items-center justify-center font-serif p-20 bg-slate-200">
+        <div className="text-xl h-screen flex flex-col items-center justify-center font-serif p-20 bg-gradient-to-r from-green-400 to-blue-400">
           <Quote></Quote>
                 </div>
             </div>

@@ -1,9 +1,16 @@
 import { Link, useNavigate } from 'react-router-dom';
 import useProfile from '../hooks/getprofiledata-hook';
+import Skeleton from 'react-loading-skeleton';
 
 export default function AppBar() {
   const navigate = useNavigate();
-  const {user} = useProfile()
+  const {user,loading} = useProfile()
+
+  if(loading){
+    return(
+        <Skeleton />
+    )
+  }
   async function handleLogout() {
     localStorage.removeItem('token');
     navigate('/signin')

@@ -2,16 +2,44 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import AppBar from "../components/Appbar";
 import {usePostid} from "../hooks/postid-hook";
 import axios from "axios";
+import Skeleton from "react-loading-skeleton";
 
+// interface Post{
+//     title : string,
+//     content : string,
+//     id : number,
+//     author :string,
+// }
 export function Postid() {
     const navigate = useNavigate()
     const { id } = useParams();
     const { posts, loading }: { posts: any, loading: boolean } = usePostid({ id });
     if (loading) {
         return (
-            <div className="container mx-auto p-6">
-                <p className="text-center">Loading...</p>
-            </div>);
+            <div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+            </div>
+        )
     }
     function handleDelete(id: any) {
         axios.delete(`https://backend.saurabhgupta0122.workers.dev/api/v1/post/delete/${id}`, {

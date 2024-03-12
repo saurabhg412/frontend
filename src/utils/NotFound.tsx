@@ -6,7 +6,7 @@ export function NotFound() {
 
   useEffect(() => {
     setTimeout(() => {
-      navigate("/post"); 
+      navigate("/"); 
     }, 2000); // Redirect after a 2-second delay
   }, []);
 

@@ -33,7 +33,7 @@ function Signup() {
                     formData);
                 localStorage.setItem("token", response.data.jwt);
                 alert(`Account Created Successfully For ${formData.email}`)
-                navigate("/post")
+                navigate("/posts")
             }
             catch (err) {
                 alert("Error in signing up! Please check your credentials.")

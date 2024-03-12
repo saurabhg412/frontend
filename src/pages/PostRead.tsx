@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import AppBar from "../components/Appbar";
 import { useAuthorPosts } from "../hooks/useAuthorposts-hook";
+import Skeleton from "react-loading-skeleton";
 
 export function PostRead(){
     const {id} = useParams();
@@ -8,9 +9,30 @@ export function PostRead(){
 
     if (loading) {
         return (
-            <div className="container mx-auto p-6">
-                <p className="text-center">Loading...</p>
-            </div>);
+            <div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+                <div>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                    <Skeleton></Skeleton>
+                </div>
+            </div>
+            );
     } else if (error){
             return <div className="error-message">Error: {error}</div>;
     } else if (post){

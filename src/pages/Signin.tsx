@@ -24,7 +24,7 @@ function Signin() {
         if (response.status == 200) {
             localStorage.setItem("token", response.data.jwt);
             alert(`Welcome ${response.data.user.name}`);
-            navigate("/post")
+            navigate("/posts")
         } 
         } catch{
             alert(`You Don't Have Account Create A New Account`);

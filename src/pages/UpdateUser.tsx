@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom"
 import useProfile from "../hooks/getprofiledata-hook";
+import FakeProgressBar from "../components/Progress-bar";
 // import { UserProfile } from "./Profile";
 
 export function UpdatedUser(){
@@ -36,6 +37,8 @@ export function UpdatedUser(){
         }
 
         return (
+            <>
+            <FakeProgressBar></FakeProgressBar>
             <div className="h-screen bg-gradient-to-r from-blue-500 to-green-300 rounded-xl shadow-lg p-10 flex flex-col sm:flex-row gap-6 items-center justify-center">
                 <div className="bg-slate-200 rounded-lg shadow-md p-10 max-w-sm">
                     <h2 className="text-4xl font-bold mb-4 text-center">Update Profile</h2>
@@ -87,6 +90,7 @@ export function UpdatedUser(){
                     </form>
                 </div>
             </div>
+        </>
         );
         
 }

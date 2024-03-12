@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Quote } from "../components/quote";
 import { Heading } from "../components/heading";
 import { signupSchema } from "@saurabh412/index";
+import FakeProgressBar from "../components/Progress-bar";
 
 
 
@@ -42,6 +43,8 @@ function Signup() {
     }
 
     return (
+      <div>
+        <FakeProgressBar></FakeProgressBar>
         <div className="grid grid-cols-12 h-screen box-content">
       <div className="h-screen w-full flex items-center justify-center col-span-12 md:col-span-8 flex-col rounded-lg bg-gradient-to-r from-blue-400 via-red-400 to-green-300">
         <div className="p-6 rounded-lg shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] bg-gradient-to-r from-green-300 to-blue-400">
@@ -71,6 +74,7 @@ function Signup() {
           <Quote></Quote>
                 </div>
             </div>
+        </div>
         </div>
     )
 }

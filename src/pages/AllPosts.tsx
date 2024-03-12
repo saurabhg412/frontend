@@ -3,6 +3,7 @@ import 'react-loading-skeleton/dist/skeleton.css'
 import usePosts from "../hooks/usepost-hook";
 import AppBar from "../components/Appbar";
 import { Link } from "react-router-dom";
+import FakeProgressBar from '../components/Progress-bar';
 
 export function AllPosts() {
     const { posts, loading }: { posts: any[], loading: boolean } = usePosts();
@@ -78,8 +79,10 @@ export function AllPosts() {
     }
 
     return (
+        <>
         <div>
             <div className="mb-2">
+            <FakeProgressBar></FakeProgressBar>
                 <AppBar></AppBar>
             </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-4">
@@ -99,5 +102,6 @@ export function AllPosts() {
                     })}
                 </div>
         </div>
+        </>
     );
 }

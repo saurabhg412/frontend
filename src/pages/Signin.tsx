@@ -3,6 +3,7 @@ import { Headings } from "../components/signinHeading";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { signinSchema } from "@saurabh412/index";
+import FakeProgressBar from "../components/Progress-bar";
 
 function Signin() {
     const [formData,setFormData] = useState<signinSchema>({
@@ -33,6 +34,8 @@ function Signin() {
     }
 
 return (
+    <div>
+        <FakeProgressBar></FakeProgressBar>
     <div className="bg-gradient-to-r from-blue-400 via-red-300 to-green-300 h-screen flex items-center justify-center">
         <div className="bg-gradient-to-r from-green-300 to-blue-300 rounded-lg shadow-lg p-10 max-w-sm">
             {/* Headings Component */} 
@@ -40,7 +43,6 @@ return (
 
             <form onSubmit={handleSubmit} className="mt-6"> 
                 <div className="mb-4"> 
-                    {/* <label htmlFor="email" className="block text-gray-700 mb-1">Email</label> */}
                     <input 
                         type="email" 
                         name="email" 
@@ -50,7 +52,6 @@ return (
                     />
                 </div>
                 <div className="mb-4"> 
-                    {/* <label htmlFor="email" className="block text-gray-700 mb-1">Email</label> */}
                     <input 
                         type="password"  
                         name="password" 
@@ -89,6 +90,7 @@ return (
                 </div>
             </form>
         </div>
+    </div>
     </div>
 );
 

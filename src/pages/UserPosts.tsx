@@ -2,6 +2,7 @@ import Skeleton from "react-loading-skeleton";
 import AppBar from "../components/Appbar";
 import usePost from "../hooks/useposts-hook";
 import { Link } from "react-router-dom";
+import FakeProgressBar from "../components/Progress-bar";
 
 export function UserPosts(){
     const {loading,posts}:{loading:boolean,posts:any[]} = usePost();
@@ -56,6 +57,7 @@ export function UserPosts(){
     return (
         <div>
             <div className="mb-2">
+            <FakeProgressBar></FakeProgressBar>
                 <AppBar></AppBar>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" >

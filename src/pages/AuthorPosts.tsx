@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import AppBar from "../components/Appbar";
 import { useAuthorPosts } from "../hooks/useAuthorposts-hook";
 import { Link } from "react-router-dom";
+import FakeProgressBar from "../components/Progress-bar";
+import Skeleton from "react-loading-skeleton";
 
 export function AuthorPosts(){
     const {id} = useParams();
@@ -10,12 +12,19 @@ export function AuthorPosts(){
     if (loading) {
         return (
             <div className="container mx-auto p-6">
-                <p className="text-center">Loading...</p>
-            </div>);
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+                <Skeleton />
+            </div>
+            );
     }
     return (
         <div>
             <div className="mb-2">
+            <FakeProgressBar></FakeProgressBar>
                 <AppBar></AppBar>
             </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 m-4">

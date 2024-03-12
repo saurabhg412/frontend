@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import useProfile from '../hooks/getprofiledata-hook';
 import Skeleton from 'react-loading-skeleton';
+import FakeProgressBar from './Progress-bar';
 
 export default function AppBar() {
   const navigate = useNavigate();
@@ -23,6 +24,7 @@ export default function AppBar() {
   
   return (
       <div className="bg-white shadow-md sticky top-0 z-10">
+                <FakeProgressBar></FakeProgressBar>
           <div className="container mx-auto px-4 flex items-center justify-between py-3">
               <Link to="/posts" className="font-bold text-xl text-blue-600 hover:text-blue-800">
                   Medium

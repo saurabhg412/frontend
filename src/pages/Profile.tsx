@@ -2,6 +2,7 @@ import axios from "axios"; // Or your preferred data fetching library
 import { Link, useNavigate, useParams } from "react-router-dom";
 import useProfile from "../hooks/getprofiledata-hook";
 import AppBar from "../components/Appbar";
+import FakeProgressBar from "../components/Progress-bar";
 
 
 export function UserProfile() {
@@ -30,6 +31,7 @@ export function UserProfile() {
 
       return (
         <div>
+          <FakeProgressBar></FakeProgressBar>
           <AppBar />
         <div className="h-98vh bg-gradient-to-r from-blue-500 to-green-300 rounded-xl shadow-lg p-10 flex flex-col sm:flex-row gap-6 items-center mt-4">
           <div>
